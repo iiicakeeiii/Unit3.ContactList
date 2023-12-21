@@ -7,15 +7,16 @@ import ContactList from "./componets/ContactList.jsx";
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div className="">
-        <ContactList/>
-      </div>
-    < />
-  )
+    const [selectedContactId, setSelectedContactId] = useState(null);
+
+    return (
+        <>
+            <div className="h-screen w-screen flex justify-center text-xl">
+                {selectedContactId ? <div>hello</div> : <ContactList/>}
+            </div>
+        </>
+    )
 }
 
 export default App
