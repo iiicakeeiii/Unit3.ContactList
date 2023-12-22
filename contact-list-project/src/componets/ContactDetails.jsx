@@ -23,11 +23,15 @@ const ContactDetails = ({selectedContactId, setSelectedContactId}) => {
     try {
         return (
             < >
-                <div>contact</div>
+                <div>{contact.id}</div>
+                <div>{contact.name}</div>
+                <div>{contact.username}</div>
+                <div>{contact.email}</div>
+                <div>{contact.phone}</div>
             </>
         )
     } catch (error) {
-
+        console.error(error)
     }
 }
 
