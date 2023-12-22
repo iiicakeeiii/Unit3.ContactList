@@ -23,11 +23,13 @@ const ContactDetails = ({selectedContactId, setSelectedContactId}) => {
     try {
         return (
             < >
-                <div>{contact.id}</div>
-                <div>{contact.name}</div>
-                <div>{contact.username}</div>
-                <div>{contact.email}</div>
-                <div>{contact.phone}</div>
+                <div className="border flex-wrap " onClick={()=> {setSelectedContactId(null)}}>
+                    <div>Name: {contact.name}</div>
+                    <div>Username: {contact.username}</div>
+                    <div>Email: {contact.email}</div>
+                    <div>Phone: {contact.phone}</div>
+                </div>
+
             </>
         )
     } catch (error) {
